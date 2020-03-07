@@ -1,2 +1,2 @@
 # CommEngineTestSolution
-This repository for a test purpose 
+ Create a sample application where you can Create products, Display the lists of products in a grid, Edit the product from grid. Product should have name, category and create date. Categories can be Baby food, grocery etc. Create api using asp.net web api to show/add/edit/delete products and use any Javascript library such as Angular, Vue JS or Jquery in front end. You can use any database you like. Please follow clean coding convention and architecture. Must publish the code in any online public repository such as GitHub/Bitbucket and share the link with us. Note: partial code is also accepted as we want to check your coding structure.
