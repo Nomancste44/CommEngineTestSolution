@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using CEngineProductsMWebApp.DbContexts;
@@ -68,7 +69,16 @@ namespace CEngineProductsMWebApp.DAL
 
         public bool UpdateAProduct(IProduct product)
         {
-            throw new NotImplementedException();
+            var cProduct = product as Product;
+            var updatingProduct = _dbContext.Products.FirstOrDefault(x => x.ProductId == cProduct.ProductId);
+            if (updatingProduct == null) return false;
+            updatingProduct.ExpiredDate = cProduct.ExpiredDate;
+            updatingProduct.ManufacturedDate = cProduct.ManufacturedDate;
+            updatingProduct.ProductName = cProduct.ProductName;
+            updatingProduct.ProductCategoryId = cProduct.ProductCategoryId;
+            _dbContext.Entry(cProduct).State = EntityState.Modified;
+            _dbContext.SaveChanges();
+            return true;
         }
 
         public bool DeleteAProduct(int productId)

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices.WindowsRuntime;
 using System.Web;
 using Unity;
 using CEngineProductMClassLibrary.Contracts;
@@ -33,7 +34,7 @@ namespace CEngineProductsMWebApp.BLL
 
         public bool UpdateAProduct(IProduct product)
         {
-            throw new NotImplementedException();
+            return _productRepository.UpdateAProduct(product);
         }
 
         public bool DeleteAProduct(int productId)
