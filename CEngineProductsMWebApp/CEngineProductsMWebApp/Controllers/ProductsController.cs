@@ -51,7 +51,10 @@ namespace CEngineProductsMWebApp.Controllers
         [HttpPut]
         public IHttpActionResult UpdateProduct(Product product)
         {
-            return Ok();
+            if (!ModelState.IsValid || !_productManager.UpdateAProduct(product))
+                return ResponseMessage(Request.CreateErrorResponse(HttpStatusCode.BadRequest, "Bad Request"));
+
+            return Ok(_productManager.GetAllProducts());
         }
     }
 }

@@ -28,7 +28,7 @@ namespace CEngineProductsMWebApp.BLL
         }
         public bool CreateAProduct(IProduct product)
         {
-            throw new NotImplementedException();
+           return _productRepository.CreateAProduct(product);
         }
 
         public bool UpdateAProduct(IProduct product)

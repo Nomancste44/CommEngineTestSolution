@@ -2,3 +2,4 @@ C:\Users\Abullah\Documents\Visual Studio 2015\Projects\OnlineTestSolution\CommEn
 C:\Users\Abullah\Documents\Visual Studio 2015\Projects\OnlineTestSolution\CommEngineTestSolution\CEngineProductsMWebApp\CEngineProductMClassLibrary\bin\Debug\CEngineProductMClassLibrary.pdb
 C:\Users\Abullah\Documents\Visual Studio 2015\Projects\OnlineTestSolution\CommEngineTestSolution\CEngineProductsMWebApp\CEngineProductMClassLibrary\obj\Debug\CEngineProductMClassLibrary.dll
 C:\Users\Abullah\Documents\Visual Studio 2015\Projects\OnlineTestSolution\CommEngineTestSolution\CEngineProductsMWebApp\CEngineProductMClassLibrary\obj\Debug\CEngineProductMClassLibrary.pdb
+C:\Users\Abullah\Documents\Visual Studio 2015\Projects\OnlineTestSolution\CommEngineTestSolution\CEngineProductsMWebApp\CEngineProductMClassLibrary\obj\Debug\CEngineProductMClassLibrary.csprojResolveAssemblyReference.cache

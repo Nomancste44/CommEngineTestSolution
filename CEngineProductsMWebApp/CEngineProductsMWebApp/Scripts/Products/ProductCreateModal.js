@@ -47,7 +47,7 @@ $('#btnSaveProduct').on('click', function () {
             $.each(data, function (index, value) {
                 var row = $('<tr><td class="hide"> ' + value.ProductId + '</td><td>'
                     + value.ProductName + '</td><td>'
-                    + value.ProductCategoryId + '</td><td>'
+                    + value.ProductCategoryName + '</td><td>'
                     + value.ProductPrice + '</td><td>'
                     + value.ManufacturedDate + '</td><td>'
                     + value.ExpiredDate + '</td>'

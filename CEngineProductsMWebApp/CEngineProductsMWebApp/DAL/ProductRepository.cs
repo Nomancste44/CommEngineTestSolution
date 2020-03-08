@@ -54,7 +54,16 @@ namespace CEngineProductsMWebApp.DAL
         }
         public bool CreateAProduct(IProduct product)
         {
-            throw new NotImplementedException();
+            try
+            {
+                _dbContext.Products.Add(product as Product);
+                _dbContext.SaveChanges();
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
         }
 
         public bool UpdateAProduct(IProduct product)
