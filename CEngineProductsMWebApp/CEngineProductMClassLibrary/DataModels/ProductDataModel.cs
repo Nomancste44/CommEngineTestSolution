@@ -11,5 +11,6 @@ namespace CEngineProductMClassLibrary.DataModels
         public DateTime ExpiredDate { get; set; }
         public double ProductPrice { get; set; }
         public string ProductCategoryName { get; set; }
+        public int  ProductCategoryId { get; set; }
     }
 }

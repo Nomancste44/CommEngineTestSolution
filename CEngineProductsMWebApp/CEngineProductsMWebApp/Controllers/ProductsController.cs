@@ -33,6 +33,12 @@ namespace CEngineProductsMWebApp.Controllers
             return Ok(_productManager.GetAllProducts());
         }
 
+        public IHttpActionResult GetAProduct(int productId)
+        {
+
+            return Ok(_productManager.GetAllProducts(productId));
+        }
+
         [HttpPost]
         public IHttpActionResult CreateProduct(Product product)
         {
@@ -40,6 +46,12 @@ namespace CEngineProductsMWebApp.Controllers
                 return ResponseMessage(Request.CreateErrorResponse(HttpStatusCode.BadRequest, "Bad Request"));
             
             return Ok(_productManager.GetAllProducts());
+        }
+
+        [HttpPut]
+        public IHttpActionResult UpdateProduct(Product product)
+        {
+            return Ok();
         }
     }
 }

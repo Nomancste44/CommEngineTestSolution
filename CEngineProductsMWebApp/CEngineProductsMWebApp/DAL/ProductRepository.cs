@@ -23,16 +23,35 @@ namespace CEngineProductsMWebApp.DAL
                 , y => y.ProductCategoryId
                 , (x, y) => new ProductDataModel()
                 {
-                   ProductName = x.ProductName,
-                   ProductPrice = x.ProductPrice,
-                   ExpiredDate = x.ExpiredDate,
-                   ManufacturedDate = x.ManufacturedDate,
+                    ProductId = x.ProductId,
+                    ProductName = x.ProductName,
+                    ProductPrice = x.ProductPrice,
+                    ExpiredDate = x.ExpiredDate,
+                    ManufacturedDate = x.ManufacturedDate,
                     ProductCategoryName = y.CategoryName
                 }).ToList();
 
             return result;
         }
 
+        public IProduct GetAllProducts(int productId)
+        {
+            var result = _dbContext.Products.Join(_dbContext.ProductCategories
+                , x => x.ProductCategoryId
+                , y => y.ProductCategoryId
+                , (x, y) => new ProductDataModel()
+                {
+                    ProductId = x.ProductId,
+                    ProductName = x.ProductName,
+                    ProductPrice = x.ProductPrice,
+                    ExpiredDate = x.ExpiredDate,
+                    ManufacturedDate = x.ManufacturedDate,
+                    ProductCategoryName = y.CategoryName,
+                    ProductCategoryId = y.ProductCategoryId
+                }).FirstOrDefault(x=>x.ProductId==productId);
+
+            return result;
+        }
         public bool CreateAProduct(IProduct product)
         {
             throw new NotImplementedException();

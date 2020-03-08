@@ -144,6 +144,7 @@
     <Content Include="Scripts\popper.min.js" />
     <Content Include="Scripts\Products\ProductCreateModal.js" />
     <Content Include="Scripts\Products\Products.js" />
+    <Content Include="Scripts\Products\ProductUpdateModal.js" />
     <Content Include="Scripts\src\index.js" />
     <Content Include="Scripts\src\methods\defaults.js" />
     <Content Include="Scripts\src\methods\destroy.js" />

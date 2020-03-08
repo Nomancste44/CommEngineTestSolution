@@ -11,6 +11,7 @@ namespace CEngineProductMClassLibrary.Contracts
     public interface IProductManager
     {
         List<ProductDataModel> GetAllProducts();
+        IProduct GetAllProducts(int productId);
         bool CreateAProduct(IProduct product);
         bool UpdateAProduct(IProduct product);
         bool DeleteAProduct(int productId);

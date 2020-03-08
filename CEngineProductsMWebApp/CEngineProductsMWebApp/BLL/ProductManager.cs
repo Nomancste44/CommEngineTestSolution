@@ -10,7 +10,7 @@ namespace CEngineProductsMWebApp.BLL
 {
     public class ProductManager:IProductManager
     {
-        private IProductManager _productRepository;
+        private readonly IProductManager _productRepository;
         [InjectionConstructor]
         public ProductManager(IProductManager productRepository)
         {
@@ -21,7 +21,11 @@ namespace CEngineProductsMWebApp.BLL
             //Checking some business logic & apply 
             return _productRepository.GetAllProducts();
         }
-
+        public IProduct GetAllProducts(int productId)
+        {
+            //Checking some business logic & apply 
+            return _productRepository.GetAllProducts(productId);
+        }
         public bool CreateAProduct(IProduct product)
         {
             throw new NotImplementedException();
